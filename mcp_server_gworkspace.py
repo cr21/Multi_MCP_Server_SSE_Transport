@@ -67,8 +67,8 @@ def format_f1_data(data: str) -> List[List[str]]:
                 
                 # Clean up driver name (remove codes like VER, HAM)
                 driver_part = parts[1]
-                driver_name = ' '.join(word for word in driver_part.split() 
-                                     if not (word.isupper() and len(word) == 3))
+                # Extract name without the 3-letter code
+                driver_name = re.sub(r'[A-Z]{3}$', '', driver_part).strip()
                 
                 nationality = parts[2]
                 team = parts[3]
@@ -125,9 +125,9 @@ def append_to_sheet(input: AppendSheetInput) -> str:
         service = build("sheets", "v4", credentials=credentials)
         
         # Check if this might be F1 data that needs formatting
-        if len(input.values) == 1 and isinstance(input.values[0], list) and len(input.values[0]) == 1:
+        if len(input.values) == 1:
             # This might be raw F1 data
-            raw_data = input.values[0][0]
+            raw_data = input.values[0][0] if isinstance(input.values[0], list) else input.values[0]
             if isinstance(raw_data, str) and ('|' in raw_data or raw_data.startswith('{')):
                 formatted_values = format_f1_data(raw_data)
             else:
