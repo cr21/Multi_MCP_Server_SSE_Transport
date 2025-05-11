@@ -27,14 +27,16 @@ persona:
 mcp_servers:
   - id: math
     script: mcp_server_1.py
-    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/S8_Assignment
+    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
   - id: documents
     script: mcp_server_2.py
-    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/S8_Assignment
+    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
   - id: websearch
     script: mcp_server_3.py
-    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/S8_Assignment
-
+    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
+  - id: telegram
+    script: telegram_mcp_server.py
+    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
 
 
 
