@@ -34,9 +34,9 @@ mcp_servers:
   - id: websearch
     script: mcp_server_3.py
     cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
-  - id: telegram
-    script: telegram_mcp_server.py
-    cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
+  # - id: telegram
+  #   script: telegram_mcp_server.py
+  #   cwd: /Users/chiragtagadiya/Downloads/MyProjects/EAG1/Multi_MCP_Server_SSE_Transport
 
 
 
