@@ -4,3 +4,4 @@ __pycache__/
 /documents/
 /faiss_index/
 .venv/
+*.mp4
